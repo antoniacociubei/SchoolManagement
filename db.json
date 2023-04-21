@@ -1,0 +1,283 @@
+{
+  "departamente": [
+    {
+      "id": 1,
+      "nume": "Departamentul de Marketing"
+    },
+    {
+      "id": 2,
+      "nume": "Departamentul de Matematica"
+    },
+    {
+      "id": 3,
+      "nume": "Departamentul de Limbi Moderne"
+    },
+    {
+      "id": 4,
+      "nume": "Departamentul de Informatica"
+    },
+    {
+      "id": 5,
+      "nume": "Departamentul de Management"
+    },
+    {
+      "id": 6,
+      "nume": "Departamentul de Contabilitate"
+    }
+  ],
+  "profesori": [
+    {
+      "departmentId": 2,
+      "id": 1,
+      "nume": "Mihai Blindar",
+      "poza": "photos/Mihai.jpg",
+      "subiecte": "Algebra liniara si geometrie , Elemente de matematica aplicata",
+      "ani": 4,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 4,
+      "id": 2,
+      "nume": "Ionel Popa",
+      "poza": "photos/Ionel.jpg",
+      "subiecte": "Programare in C, Algoritmi si structuri de date , Programare Orientata Obiect",
+      "ani": 10,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 1,
+      "id": 3,
+      "nume": "Irina Matei",
+      "poza": "photos/Irina.jpg",
+      "subiecte": "Introducere in Marketing , Politici de Marketing",
+      "ani": 2,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 4,
+      "id": 4,
+      "nume": "Florin Marcovei",
+      "poza": "photos/Florin.jpg",
+      "subiecte": "Arhitectura Calculatoarelor, Programare logica",
+      "ani": 4,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 3,
+      "id": 5,
+      "nume": "Petra Vasile",
+      "poza": "photos/Petra.jpg",
+      "subiecte": "Limba engleza",
+      "ani": 4,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 5,
+      "id": 6,
+      "nume": "Ioana Popescu",
+      "poza": "photos/Ioana.jpg",
+      "subiecte": "Managementul productiei , Managementul organizatiei",
+      "ani": 4,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 4,
+      "id": 7,
+      "nume": "Raluca Trisca",
+      "poza": "photos/Raluca.jpg",
+      "subiecte": "Baze de date in economie, Fundamnete Big Data",
+      "ani": 4,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 3,
+      "id": 8,
+      "nume": "Raisa Ivan",
+      "poza": "photos/Raisa.jpg",
+      "subiecte": "Limba Germana",
+      "ani": 11,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 2,
+      "id": 9,
+      "nume": "Alina Ilar",
+      "poza": "photos/Alina.jpg",
+      "subiecte": "Analiza Matematica 1, Analiza Matematica 2",
+      "ani": 7,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 1,
+      "id": 10,
+      "nume": "Andreea Roman",
+      "poza": "photos/Andreea.jpg",
+      "subiecte": "Politici de marketing, Economia turismului, Marketingul serviciilor",
+      "ani": 6,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 5,
+      "id": 11,
+      "nume": "Andrei Vidican",
+      "poza": "photos/Andrei.jpg",
+      "subiecte": "Managementul exploatatiilor agricole, Strategii de accesare a fondurilor europene",
+      "ani": 17,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 4,
+      "id": 12,
+      "nume": "David Hubert",
+      "poza": "photos/David.jpg",
+      "subiecte": "Sisteme de operare, Retele de calculatoare",
+      "ani": 12,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 1,
+      "id": 13,
+      "nume": "Aurel Marinca",
+      "poza": "photos/Aurel.jpg",
+      "subiecte": "Comportamentul consumatorului, Agroturism,Marketing strategic",
+      "ani": 10,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 5,
+      "id": 14,
+      "nume": "Ovidiu Crisan",
+      "poza": "photos/Ovidiu.jpg",
+      "subiecte": "Managementul unitatilor in comert, Managementul Calitatii",
+      "ani": 25,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 2,
+      "id": 15,
+      "nume": "Mircea Dan",
+      "poza": "photos/Mircea.jpg",
+      "subiecte": "Statistica descriptiva, Criptografie",
+      "ani": 15,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 2,
+      "id": 16,
+      "nume": "Catalin Ardelean",
+      "poza": "photos/Catalin.jpg",
+      "subiecte": "Calcul numeric",
+      "ani": 14,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 6,
+      "id": 17,
+      "nume": "Elena Mihaila",
+      "poza": "photos/Elena.jpg",
+      "subiecte": "Bazele contabilitatii, Contabilitate aplicata",
+      "ani": 7,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 6,
+      "id": 18,
+      "nume": "Razvan Ionescu",
+      "poza": "photos/Razvan.jpg",
+      "subiecte": "Control financiar",
+      "ani": 11,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 6,
+      "id": 19,
+      "nume": "Tudor Cosmin",
+      "poza": "photos/Tudor.jpg",
+      "subiecte": "Control de gestiune, Audit financiar",
+      "ani": 16,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 6,
+      "id": 20,
+      "nume": "Marinela Murg",
+      "poza": "photos/Marinela.png",
+      "subiecte": "Etica si expertiza contabila, Doctrine economice",
+      "ani": 5,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 4,
+      "id": 21,
+      "nume": "Rahela Sabau",
+      "poza": "photos/Rahela.jpg",
+      "subiecte": "Fundamente de Big Data, Inteligenta artificiala",
+      "ani": 3,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 3,
+      "id": 22,
+      "nume": "Monica Zaharie",
+      "poza": "photos/Monica.jpg",
+      "subiecte": "Limba franceza",
+      "ani": 9,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 2,
+      "id": 23,
+      "nume": "Ariana Bente",
+      "poza": "photos/Ariana.jpg",
+      "subiecte": "Teoria jocurilor, Sisteme dinamice, Teoria functiilor",
+      "ani": 12,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 1,
+      "id": 24,
+      "nume": "Adrian Sama",
+      "poza": "photos/Adrian.jpg",
+      "subiecte": "Branding, Marketing online, Marketing financiar-bancar",
+      "ani": 19,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 5,
+      "id": 25,
+      "nume": "Mihaela Neagrau",
+      "poza": "photos/Mihaela.jpg",
+      "subiecte": "Management comparat, Logistica",
+      "ani": 10,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 6,
+      "id": 26,
+      "nume": "Karla Neikoni",
+      "poza": "photos/Karla.jpg",
+      "subiecte": "Contabilitate aprofundata, Audit financiar",
+      "ani": 14,
+      "UBBgraduate": false
+    },
+    {
+      "departmentId": 4,
+      "id": 27,
+      "nume": "Cosmin Faur",
+      "poza": "photos/Cosmin.jpg",
+      "subiecte": "Tehnologii web front-end, Medii de programare",
+      "ani": 4,
+      "UBBgraduate": true
+    },
+    {
+      "departmentId": 5,
+      "id": 27,
+      "nume": "Melissa Kunar",
+      "poza": "photos/Melissa.jpg",
+      "subiecte": "Managementul resurselor umane, Managementul mediului ",
+      "ani": 8,
+      "UBBgraduate": false
+    } 
+    
+  ]
+}

@@ -1,0 +1,131 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function()
+	{
+
+		$('#afisareDepartamente').click(function()
+			{
+				$.getJSON("http://localhost:4000/departamente",function(data)
+					{
+						var content = '';
+						$.each(data, function(i, departament)
+							{
+								content += "<button type='button' style='border:none;background-color:#fff;margin:10px;font-size:20px;' id='" + departament.id + "'>" + departament.nume + "</button>";
+					
+							});
+						$('#departamente').html(content);
+					});
+			});
+
+		$('#departamente').on('click','button', function()
+			{
+				var depart = parseInt($(this).attr('id'));
+				$.getJSON("http://localhost:4000/profesori", function(data)
+					{
+						var content = '';
+						$.each(data, function(i, profesor)
+							{
+								if(profesor.departmentId == depart) 
+								{
+									content += "<tr>";
+									content += "<td><h4>Prof. " + profesor.nume + "</h4>";
+									content += "<button type='button' id='" + profesor.id + "'>Sterge profesor</button></td>";
+									content += "<td><img style='width: 120px; height: auto;' src='" + profesor.poza + "'></td>";
+									content += "<td>";
+									content += "<div><b>Subiecte: </b>" + profesor.subiecte + "</div>";
+									content += "<div><b>Ani de predare:</b> " + profesor.ani + "</div>";
+									var UBBgraduate = '';
+									if(profesor.UBBgraduate === true)
+										UBBgraduate = '&#10004';
+									if(profesor.UBBgraduate === false)
+										UBBgraduate = '&#10005';
+									content += "<div><b>Absolvent UBB:</b> " + UBBgraduate + "</div></td>";
+									content +="</tr>";
+								}
+							});
+						$('#profesori').html(content);
+					});
+
+				$("#departamente button").removeClass("active");
+			    $(this).addClass("active");
+			    console.log($(this));
+			});
+
+		$('#profesori').on('click','button', function()
+			{
+				var url = "http://localhost:4000/profesori/" + $(this).attr('id');
+				$.ajax({
+				 	url: url,
+				 	type: "DELETE",
+				 	success: function() {
+				 		alert("Profesorul a fost sters");
+				 	}
+				})
+				$(this).closest('tr').remove();
+
+			});
+
+	});
+
+function inserareDate() 
+{
+	if($('.active').length !== 0) 
+	{
+		//dateProfesor=$("#formular").serializeArray();
+		dateProfesor=JSON.stringify( { "departmentId": $('.active').attr('id'), "nume": $('#nume').val(), "subiecte": $('#subiecte').val(), "ani": $('#ani').val() })
+
+		console.log(dateProfesor);
+		$.ajax({
+			url: 'http://localhost:4000/profesori',
+			type: "POST",
+			data: dateProfesor,
+			contentType: "application/json",
+			success: function() {
+				alert("Profesor introdus");
+			}
+		})
+	}
+	else
+	{
+		alert("Eroare! Selectati un departament");
+	}
+}
+
+</script>
+</head>
+
+<body>
+	<div>
+		<button type="button" id="afisareDepartamente" style="margin: 20px; padding: 20px; background-color: #4CAF50"><span style="font-size:24px; color:#ffffff;"> Afiseaza departamente</button>
+	</div>
+
+	<div style="display: flex;">
+		<div style="width: 30%; border: 2px solid black; padding: 30px; margin: 20px;">
+			<h2>Lista departamente</h2>
+			<div id="departamente"></div>
+		</div>
+	
+		<div style="width: 70%; border: 2px solid black; padding: 30px; margin: 20px;">
+			<h2>Lista profesori</h2>
+			<table id="profesori"></table>
+		</div>
+	</div>
+
+	<div style="border: 2px solid black; padding: 50px; margin: 20px;">
+		<h2>Introduceti datele</h2>
+			<form id="formular" method="POST" action="" style="display: inline-grid;"><br>
+				<label>Nume</label>
+				<input  id="nume"type="text" name="nume"><br>
+				<label>Subiecte</label>
+				<input id="subiecte" type="text" name="subiecte"><br>
+				<label>Ani de predare</label>
+				<input id="ani" type="number" name="ani"><br>
+				
+				<input type="submit" value="Trimite" onmouseover="inserareDate()">
+			</form>
+	</div>
+</body>
+</html>
